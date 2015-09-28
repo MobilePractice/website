@@ -29,3 +29,18 @@ Run `grunt build` for building and `grunt serve` for preview.
 ## Testing
 
 Running `npm test` will run the unit tests with karma.
+
+## Heroku deployment
+
+There are detailed instructions [here](https://github.com/DaftMonk/generator-angular-fullstack#heroku) on how to deploy to [Heroku](http://heroku.com) -- and/or [Openshift](https://www.openshift.com) -- but the basics are:
+
+### First deployment
+
+- Run `yo angular-fullstack:heroku`
+- Run `cd dist && heroku addons:create mongolab`
+- Run `heroku open` to see the live website
+
+### Pushing updates
+
+- Run `grunt` to build the app
+- Run `grunt buildcontrol:heroku`
